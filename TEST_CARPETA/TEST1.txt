@@ -6,12 +6,106 @@ ATAJO GUARDAR ARCHIVO: CTRL+S (VER SI TIENE UN CIRCULITO BLANCO EN LA PESTAÑA D
 CTRL O: ES PARA ABRIR ARCHIVOS - OPEN
 CTRL W: CIERRA LA PESTAÑA
 SHIFT + F12: TE DICE EN QUÉ CONSISTE LA FUNCIÓN
+CTRL + ENTER: EJECUTA EL CÓDIGO
 
  - SIMBOLOS -
 SIMBOLO DE COMILLA SIMPLE: tecla de al lado del cero 9 0 ' ¿ o, hacer click en tecla izquierda del enter K L ; ' 
 SIMBOLO DE MAYOR: > ALT+62 O HACER SHIF Y TECLAS DE AL LADO DE LA 'M'
 SIMBOLO DE MENOR: < ALT+60 O HACER SHIF Y TECLAS DE AL LADO DE LA 'M'
+SIMBOLO DE CORCHETE: [ ]  SHIFT + EL BOTON DE AL LADO DEL ENTER. ESTO SE USA PARA ARMAR UNA LISTA
 
+ - Métodos comunes para listas -
+
+1 - append(item): Agrega un elemento al final de la lista.
+lista = [1, 2, 3]
+lista.append(4)  # [1, 2, 3, 4]
+
+2 - extend(iterable): Agrega todos los elementos de un iterable (como otra lista) al final de la lista.
+lista = [1, 2, 3]
+lista.extend([4, 5])  # [1, 2, 3, 4, 5]
+
+3 - insert(index, item): Inserta un elemento en una posición específica de la lista.
+lista = [1, 2, 3]
+lista.insert(1, 'a')  # [1, 'a', 2, 3]
+
+4 - remove(item): Elimina la primera aparición del elemento en la lista.
+lista = [1, 2, 3, 2]
+lista.remove(2)  # [1, 3, 2]
+
+5 - pop(index): Elimina y devuelve el elemento en la posición especificada. Si no se proporciona índice, elimina el último elemento.
+lista = [1, 2, 3]
+lista.pop()  # Devuelve 3 y la lista queda [1, 2]
+lista.pop(0)  # Devuelve 1 y la lista queda [2]
+
+6 - clear(): Elimina todos los elementos de la lista.
+lista = [1, 2, 3]
+lista.clear()  # []
+
+7 - index(item): Devuelve el índice del primer elemento que coincide con el valor proporcionado.
+lista = [1, 2, 3]
+lista.index(2)  # Devuelve 1
+
+8 - count(item): Devuelve el número de veces que un elemento aparece en la lista.
+lista = [1, 2, 2, 3]
+lista.count(2)  # Devuelve 2
+
+9 - sort(): Ordena la lista en orden ascendente (o descendente si se usa reverse=True).
+lista = [3, 1, 2]
+lista.sort()  # [1, 2, 3]
+
+10 - lista.sort(reverse=True)  # [3, 2, 1]
+reverse(): Invierte el orden de los elementos en la lista.
+lista = [1, 2, 3]
+lista.reverse()  # [3, 2, 1]
+
+11 - copy(): Devuelve una copia superficial de la lista.
+lista = [1, 2, 3]
+nueva_lista = lista.copy()  # [1, 2, 3]
+
+ - - Métodos para cadenas (str): - - 
+
+upper(): Convierte todos los caracteres en mayúsculas.
+texto = "hola"
+texto.upper()  # "HOLA"
+
+lower(): Convierte todos los caracteres en minúsculas.
+texto = "HOLA"
+texto.lower()  # "hola"
+
+replace(old, new): Reemplaza todas las apariciones de old por new.
+texto = "hola mundo"
+texto.replace("mundo", "Python")  # "hola Python"
+
+split(delimiter): Divide una cadena en una lista de subcadenas usando un delimitador.
+texto = "hola mundo"
+texto.split()  # ['hola', 'mundo']
+
+join(iterable): Une una lista de cadenas en una sola cadena con un delimitador.
+palabras = ['hola', 'mundo']
+' '.join(palabras)  # "hola mundo"
+
+ - - Métodos para diccionarios (dict): - -
+ 
+get(key): Devuelve el valor asociado a la clave. Si la clave no existe, devuelve None (o un valor predeterminado).
+dic = {'a': 1, 'b': 2}
+dic.get('a')  # 1
+dic.get('c', 'No existe')  # 'No existe'
+
+keys(): Devuelve una vista de las claves del diccionario.
+dic = {'a': 1, 'b': 2}
+dic.keys()  # dict_keys(['a', 'b'])
+
+values(): Devuelve una vista de los valores del diccionario.
+dic = {'a': 1, 'b': 2}
+dic.values()  # dict_values([1, 2])
+
+items(): Devuelve una vista de los pares clave-valor del diccionario.
+dic = {'a': 1, 'b': 2}
+dic.items()  # dict_items([('a', 1), ('b', 2)])
+
+update(other_dict): Actualiza el diccionario con los pares clave-valor de otro diccionario.
+dic = {'a': 1}
+dic.update({'b': 2})  # {'a': 1, 'b': 2}
 
 
 
